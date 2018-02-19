@@ -11,8 +11,8 @@ class User(models.Model):
     first_name = models.CharField(max_length=50) # CharField is field type for characters
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
-    Bio = models.CharField(max_length=250)
-    #Gender = models.CharField(max_length=250)
+    bio = models.CharField(max_length=250)
+    gender = models.CharField(max_length=20)
     password = models.CharField(max_length=22)
     created_at = models.DateTimeField(auto_now_add=True) # DateTimeField is field type for date and time
     updated_at = models.DateTimeField(auto_now=True) # note the `auto_now=True` parameter

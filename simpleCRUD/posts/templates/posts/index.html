@@ -12,7 +12,7 @@
 </head>
 <body>
     <h1>Django CRUD</h1>
-    <p>Thank you Amechi for this opportunity</p>
+    <p>Thank you Amechi!</p>
     <!-- Logout Success Message -->
     {% if messages %}
         {% for message in messages %}
@@ -38,7 +38,7 @@
             {% endfor %}
         {% endif %}
         <!-- Registration Form -->
-        <form action="/" method="POST">
+        <form action="/register" method="POST">
             <!-- Django-required CSRF Token (to prevent spoofing) -->
             {% csrf_token %}
             <label for="first_name"> First Name:
@@ -50,6 +50,11 @@
             <label for="bio"> Bio:
                 <input type="text" name="bio" id="bio">
             </label>
+            <select name="gender">
+                    <option value="male">male</option>
+                    <option value="female">female</option>
+                    <option value="non-binary">non-binary</option>
+            </select> 
             <label for="email"> Email:
                 <input type="email" name="email" id="email">
             </label>
@@ -77,7 +82,7 @@
             {% endfor %}
         {% endif %}
         <!-- Login Form -->
-        <form action="/login" method="POST">
+        <form action="." method="POST">
             {% csrf_token %}
             <label for="login_email"> Email:
                 <input type="email" name="login_email" id="login_email">

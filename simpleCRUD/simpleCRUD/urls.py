@@ -22,9 +22,9 @@ from posts.views import *
 
 urlpatterns = [
    path('admin/', admin.site.urls),
-   url(r'^$', views.index), # load login/registration page
-   url(r'^login', views.login), # validate and login a user
+   url(r'^$', views.user_login), # validate and login a user
    url(r'^logout', views.logout), # logout a user
    url(r'^$', include('posts.urls')),
    url(r'^posts/', include('posts.urls')),
+   url(r'^register', views.register), # logout a user
 ]

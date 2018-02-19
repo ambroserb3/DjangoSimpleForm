@@ -5,7 +5,7 @@ from posts.models import User
 
 
 urlpatterns = [
-  url(r'^$', views.index, name='index'),
-  url(r'^login', views.login), #login a user
+  url(r'^$', views.user_login, name='login'), #login a user
   url(r'^logout', views.logout), # logout a user
-];
+  url(r'^register', views.register), # logout a user
+]
