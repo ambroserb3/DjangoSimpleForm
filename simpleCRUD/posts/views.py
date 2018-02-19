@@ -5,6 +5,7 @@ from posts.models import * # gives us access to `User`models
 from django.contrib import messages # grabs django's `messages` module
 from django.contrib.auth import authenticate, login
 from .forms import LoginForm, UserRegistrationForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -31,7 +32,8 @@ def register(request):
     # If POST, POST:
     form = UserRegistrationForm(request.POST or None)
     if request.method == "POST":
-        new_user = (request.POST or None)
-        new_user.save()
+        user = User.objects.create_user(commit=False)
+        user.is_active = False
+        user.save()
     return render(request, 'posts/registration.html', {'new user', new_user})
 
