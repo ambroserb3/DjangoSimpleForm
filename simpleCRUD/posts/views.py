@@ -8,25 +8,6 @@ from .forms import LoginForm, UserRegistrationForm
 
 # Create your views here.
 
-def index(request):
-
-    # If POST, POST:
-    if request.method == "POST":
-        # Prepare registration data:
-        reg_data = {
-            "first_name": request.POST["first_name"],
-            "last_name": request.POST["last_name"],
-            "bio": request.POST["bio"],
-            "gender": request.POST["gender"],
-            "email": request.POST["email"],
-            "password": request.POST["password"],
-            "confirm_pwd": request.POST["confirm_pwd"],
-        }
-
-    # If GET, load login/registration page:
-    else:
-        return render(request, "posts/index.html")
-
 def user_login(request):
     # If POST, login:
     if request.method == "POST":
