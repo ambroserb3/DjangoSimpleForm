@@ -26,4 +26,6 @@ urlpatterns = [
    url(r'^$', include('posts.urls')),
    url(r'^posts/', include('posts.urls')),
    url(r'^register', views.register), # register a user
+   url(r'^login', views.logged),
+
 ]

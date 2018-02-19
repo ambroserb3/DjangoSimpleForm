@@ -7,4 +7,5 @@ from posts.models import User
 urlpatterns = [
   url(r'^$', views.user_login, name='login'), #login a user
   url(r'^register', views.register), # logout a user
+  url(r'^login', views.logged)
 ]

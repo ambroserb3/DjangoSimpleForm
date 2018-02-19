@@ -37,3 +37,8 @@ def register(request):
         user.save()
     return render(request, 'posts/registration.html', {'new user', new_user})
 
+
+def logged(request):
+    # If POST, POST:
+    return render(request, 'posts/login.html')
+
